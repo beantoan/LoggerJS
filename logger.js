@@ -43,10 +43,10 @@ var Logger = (function () {
         }
         this.log(this.ERROR, className, methodName, params);
     };
-    Logger.warn = function (tag, className, methodName) {
+    Logger.warn = function (className, methodName) {
         var params = [];
-        for (var _i = 3; _i < arguments.length; _i++) {
-            params[_i - 3] = arguments[_i];
+        for (var _i = 2; _i < arguments.length; _i++) {
+            params[_i - 2] = arguments[_i];
         }
         this.log(this.WARN, className, methodName, params);
     };

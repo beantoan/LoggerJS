@@ -40,7 +40,7 @@ export class Logger {
     this.log(this.ERROR, className, methodName, params);
   }
 
-  static warn<T>(tag: string, className: string, methodName: string, ...params: T[]) {
+  static warn<T>(className: string, methodName: string, ...params: T[]) {
     this.log(this.WARN, className, methodName, params);
   }
 }
