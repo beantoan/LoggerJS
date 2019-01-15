@@ -16,14 +16,12 @@ var Logger = (function () {
         }
     };
     Logger.log = function (type, className, methodName, params) {
-        if (params && params.length === 0) {
-            this.printLog(type, ">>> " + className + "#" + methodName + "()");
-        }
-        else {
+        this.printLog(type, ">>> " + className + "#" + methodName + "()");
+
+        if (params && params.length > 0) {
             this.printLog(type, ">>> " + className + "#" + methodName + "()");
             for (var _i = 0, params_1 = params; _i < params_1.length; _i++) {
-                var param = params_1[_i];
-                this.printLog(type, param);
+                this.printLog(type, params_1[_i]);
             }
             this.printLog(type, 'END <<<');
         }

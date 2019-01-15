@@ -21,10 +21,9 @@ export class Logger {
   }
 
   static log<T>(type: number, className: string, methodName: string, params: T[]) {
-    if (params && params.length === 0) {
-      this.printLog(type, `>>> ${className}#${methodName}()`);
-    } else {
-      this.printLog(type, `>>> ${className}#${methodName}()`);
+    this.printLog(type, `>>> ${className}#${methodName}()`);
+
+    if (params && params.length > 0) {
       for (const param of params) {
         this.printLog(type, param);
       }
