@@ -19,8 +19,8 @@ var Logger = (function () {
         this.printLog(type, ">>> " + className + "#" + methodName + "()");
 
         if (params && params.length > 0) {
-            for (var _i = 0, params_1 = params; _i < params_1.length; _i++) {
-                this.printLog(type, params_1[_i]);
+            for (var _i = 0; _i < params.length; _i++) {
+                this.printLog(type, params[_i]);
             }
             this.printLog(type, 'END <<<');
         }
