@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample</title>
+
+    <script src="logger.js"></script>
+</head>
+<body>
+
+<h1>Hello, this is an example. Press F12 or open developer console to see results</h1>
+
+<script>
+    var Example = {};
+
+    Example.functionX = function () {
+        var varX = {a: 1, b: 2};
+        Logger.info('Example', 'functionX', 'varX', varX);
+        Logger.warn('Example', 'functionX', 'varX', varX);
+        Logger.error('Example', 'functionX', 'varX', varX);
+    };
+
+    Example.functionX();
+</script>
+</body>
+</html>
